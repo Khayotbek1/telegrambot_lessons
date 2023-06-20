@@ -1,7 +1,8 @@
+
 class Animal {
     constructor(name, sound) {
-        this.name = name;
-        this.sound = sound;
+        this.name = name
+        this.sound = sound
     }
 
     speak() {
@@ -10,14 +11,23 @@ class Animal {
 
 }
 
-class Bird extends Animal {
+class Birds extends Animal {
     fly() {
-        console.log('is Flying');
+        console.log('is fly');
     }
 }
 
-const cat = new Animal('Cat', 'Meow')
-const dog = new Animal('Dog', 'WoW')
-const eagle = new Bird('Eagle', 'bru')
+class Reptiles extends Animal {
+    poisonous() {
+        console.log('Yes it is poisonous');
+    }
+}
 
+const cat = new Animal('Cat', 'Meow');
+const dog = new Animal('dog', 'WoW');
+const eagle = new Birds('eagle', 'br');
+const snake = new Reptiles('Snake', 'Fishshsh')
+
+snake.poisonous()
+cat.speak()
 eagle.fly()
