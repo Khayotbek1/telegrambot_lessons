@@ -1,21 +1,24 @@
 class Student {
     constructor(name, degree) {
-        this.name = name
-        this.degree = degree
+        this.name = name;
+        this.degree = degree;
     }
 
     get info() {
         return [this.name, this.degree]
     }
+    // get guruhlab oladi
 
-    set editName(name) {
-        this.name = name
-        return name
+    set editDegree(degree) {
+        this.degree = this.degree
+        return degree
     }
+
+    //set o'zgartirish kiritadi
 }
 
-const hayot = new Student('Hayot', 'Master')
+const hayot = new Student('Hayot', 'student')
 
-hayot.editName = 'Hayotbek'
+hayot.editDegree = 'Master'
 
-console.log(hayot);
+console.log(hayot.degree);
