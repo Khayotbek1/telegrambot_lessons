@@ -20,6 +20,6 @@ const fs = require("fs");
 // const result = fs.existsSync("./test.txt");
 // console.log(result);
 
-fs.readFile("./test.txt", { encoding: "UTF-8" }, (err, data) => {
-  console.log(err, data);
-});
+// fs.readFile("./test.txt", { encoding: "UTF-8" }, (err, data) => {
+//   console.log(err, data);
+// });
