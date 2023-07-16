@@ -1,5 +1,4 @@
 const https = require("https");
-
 https.get("https://jsonplaceholder.typicode.com/posts", (Response) => {
   Response.setEncoding("utf-8");
   let data = "";
@@ -10,8 +9,8 @@ https.get("https://jsonplaceholder.typicode.com/posts", (Response) => {
 
   Response.on("end", () => {
     try {
-      let result = JSON.parse(data);
-      console.log(result);
+      let x = JSON.parse(data);
+      console.log(x);
     } catch (error) {
       console.log(error.message);
     }
