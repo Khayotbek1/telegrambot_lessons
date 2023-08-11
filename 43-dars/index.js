@@ -2,14 +2,18 @@ import axios from "axios";
 
 async function TelegramBot() {
   let updates = await axios.get(
-    "https://api.telegram.org/bot6528920785:AAEUDQiju_-g4EnF8mdQIb2vhne0Jvv1yyk/getUpdates"
+    "https://api.telegram.org/bot6528920785:AAEUDQiju_-g4EnF8mdQIb2vhne0Jvv1yyk/getUpdates?offset=-1"
   );
+
   if (!updates?.data?.ok) return;
   for (let message of updates.data.result) {
-    sendRequest("sendMessage", {
+    sendRequest("sendLocation", {
       chat_id: message.message.chat.id,
-      text: "<b>Hi send me link</b>",
-      parse_mode: "html",
+      longitude: "40.3689992",
+      latitude: "71.8380567,16z",
+      caption: "@HRazzoqov",
+      // text: "<b>Send me link</b>",
+      // parse_mode: "html",
     });
   }
 }
